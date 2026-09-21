@@ -77,13 +77,13 @@
       "url": "https://github.com/sparsh101sparsh/sih26188-ssb-document-screening"
     },
     {
-      "name": "CodeForge",
+      "name": "CodeRev",
       "description": "Real-Time Competitive Programming & Algorithmic Arena.",
       "highlights": [
         "Docker-sandboxed multi-language remote execution engine with Glicko-2 / Elo matchmaking.",
         "Redis Pub/Sub WebSocket synchronization for sub-100ms real-time 1v1 battle duels (48/48 tests passed)."
       ],
-      "url": "https://github.com/sparsh101sparsh/hackathon3"
+      "url": "https://github.com/sparsh101sparsh/CodeRev"
     },
     {
       "name": "NullNote",

@@ -45,7 +45,7 @@ Systems and AI Engineer with deep expertise in multi-modal forensic AI, autonomo
 - Integrated **AdaFace 1:1 quality-adaptive face verification** and **MiniFASNet multi-spectral liveness anti-spoofing** optimized via ONNX Runtime for edge CPU execution (<300ms inference).
 - Utilized AES-256 encrypted **SQLCipher** for tamper-proof offline ledger persistence; verified by **54/54 passing unit and integration tests**.
 
-### **CodeForge — Real-Time Competitive Programming & Algorithmic Arena**
+### **CodeRev — Real-Time Competitive Programming & Algorithmic Arena**
 *Next.js 14, Monaco Editor, Docker, Redis Pub/Sub, PostgreSQL 16, Prisma ORM, WebSocket*
 - Developed an interactive competitive coding platform featuring 600+ algorithmic problems, AST-based memory visualizers, and multiplayer 1v1 battle rooms.
 - Built an **ephemeral sandboxed multi-language remote execution engine** running inside resource-capped Docker containers with strict security invariants to prevent jailbreaks.
