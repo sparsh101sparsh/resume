@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sparsh Singh - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #334155;
+      --accent: #2563eb;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+      --tag-bg: #f1f5f9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: var(--primary);
+      line-height: 1.5;
+      padding: 40px 20px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 48px 56px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+      border: 1px solid var(--border);
+    }
+
+    /* Print & Export Bar */
+    .action-bar {
+      max-width: 860px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #0f172a;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .btn:hover { background: #1e293b; }
+
+    /* Header */
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 18px;
+      margin-bottom: 22px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 10px;
+      font-size: 0.875rem;
+      color: var(--secondary);
+    }
+
+    .contact-links a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .contact-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .contact-links span.dot {
+      color: #cbd5e1;
+    }
+
+    /* Section Headings */
+    section {
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 5px;
+      margin-bottom: 12px;
+    }
+
+    /* Summary */
+    .summary-text {
+      font-size: 0.88rem;
+      color: var(--secondary);
+      line-height: 1.6;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      row-gap: 8px;
+      column-gap: 16px;
+      font-size: 0.85rem;
+    }
+
+    .skill-cat {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .skill-items {
+      color: var(--secondary);
+      line-height: 1.5;
+    }
+
+    /* Project Cards */
+    .project-card {
+      margin-bottom: 18px;
+    }
+    .project-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 3px;
+    }
+
+    .project-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .project-tags {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    ul.project-bullets {
+      list-style-type: square;
+      padding-left: 18px;
+      font-size: 0.85rem;
+      color: var(--secondary);
+      line-height: 1.55;
+    }
+
+    ul.project-bullets li {
+      margin-bottom: 4px;
+    }
+
+    ul.project-bullets li strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Education & Achievements */
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .item-sub {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .page-container {
+        padding: 24px 32px;
+        box-shadow: none;
+        border: none;
+        max-width: 100%;
+      }
+      .action-bar {
+        display: none;
+      }
+      a {
+        color: var(--primary);
+        text-decoration: none;
+      }
+      section {
+        page-break-inside: avoid;
+        margin-bottom: 16px;
+      }
+      .project-card {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="action-bar">
+    <button class="btn" onclick="window.print()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+        <rect x="6" y="14" width="12" height="8"></rect>
+      </svg>
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <div class="page-container">
+    <header>
+      <div class="header-top">
+        <h1>SPARSH SINGH</h1>
+      </div>
+      <div class="subtitle">AI Systems Engineer &bull; Full-Stack & Autonomous Agents Architect</div>
+      <div class="contact-links">
+        <span>Bengaluru / Delhi NCR, India</span>
+        <span class="dot">&bull;</span>
+        <a href="mailto:0workwithsparsh@gmail.com">0workwithsparsh@gmail.com</a>
+        <span class="dot">&bull;</span>
+        <a href="https://github.com/sparsh101sparsh" target="_blank">github.com/sparsh101sparsh</a>
+        <span class="dot">&bull;</span>
+        <a href="https://www.linkedin.com/in/sparsh-singh-00a339271/" target="_blank">linkedin.com/in/sparsh-singh</a>
+        <span class="dot">&bull;</span>
+        <a href="https://x.com/issparsh1" target="_blank">x.com/issparsh1</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p class="summary-text">
+        Systems and AI Engineer with deep expertise in multi-modal forensic AI, autonomous agent orchestration, edge computing, and distributed backend architectures. Proven record of engineering high-impact solutions for national-level challenges—including air-gapped border biometrics (Smart India Hackathon 2026) and deterministic FinTech operations (Paytm AI Hackathon 2026). Dedicated to deterministic guardrails, zero-hallucination policies, and 100% automated test coverage across production systems.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-cat">Languages</div>
+        <div class="skill-items">Python (3.10+), TypeScript, JavaScript (ES6+), C++, SQL, HTML5/CSS3</div>
+
+        <div class="skill-cat">AI / ML & Vision</div>
+        <div class="skill-items">PyTorch, ONNX Runtime, Vision Transformers (ViT), Wav2Vec 2.0, OpenCV, RapidOCR, AdaFace, MiniFASNet, Sarvam AI (sarvam-105b), XGBoost</div>
+
+        <div class="skill-cat">Backend & DBs</div>
+        <div class="skill-items">FastAPI, Node.js, Express.js, Next.js (App Router), Redis (Pub/Sub), PostgreSQL (Prisma, Supabase), SQLCipher, SQLite (WAL Mode)</div>
+
+        <div class="skill-cat">Cloud & DevOps</div>
+        <div class="skill-items">AWS (S3, SQS, DynamoDB), Docker, Render, Vercel, Meta WhatsApp Cloud API (v21.0), Cloudflare Tunnels, GitHub Actions (CI/CD)</div>
+
+        <div class="skill-cat">Frontend & Browser</div>
+        <div class="skill-items">React, Next.js 14, Tailwind CSS, Monaco Editor, Chrome Extensions (Manifest V3), HTML5 Canvas, IndexedDB / Dexie.js, CRDTs</div>
+
+        <div class="skill-cat">Architectures</div>
+        <div class="skill-items">Air-Gapped Zero-Trust Systems, Deterministic Policy Guardrails, Cryptographic Token Verification, TDD (Pytest, Jest)</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Featured Projects</h2>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-title">NETRA &mdash; Enterprise Multi-Modal Forensic AI & Threat Intelligence Platform</span>
+        </div>
+        <div class="project-tags">FastAPI &bull; Next.js 14 &bull; AWS (S3, SQS, DynamoDB) &bull; PyTorch &bull; ViT &bull; Wav2Vec 2.0 &bull; Meta WhatsApp API</div>
+        <ul class="project-bullets">
+          <li>Architected an institutional-grade cyber-defense platform combating generative AI deepfakes, digital arrest scams, and voice cloning, aligned with <strong>Reserve Bank Innovation Hub (RBIH)</strong> & <strong>I4C</strong> standards.</li>
+          <li>Designed a <strong>multi-modal late decision fusion pipeline</strong> coupling spatial CNN boundary seam detectors with Vision Transformer (ViT) latent diffusion analyzers, Wav2Vec 2.0 acoustic spectrogram processors, and RapidOCR token extraction.</li>
+          <li>Integrated <strong>Meta WhatsApp Cloud API (v21.0)</strong> for zero-barrier citizen triage reaching 535M+ users, backed by asynchronous AWS S3 + SQS worker nodes and DynamoDB job states.</li>
+          <li>Automated compilation of statutory court-admissible FIR evidence citing <strong>BNS 2023 Sec 318(4)</strong> and <strong>IT Act Sec 66D</strong>; maintained <strong>52/52 passing pytest suite (100% pass rate)</strong> under adversarial SQL injection probes and concurrency stress tests.</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-title">Resolve OS &mdash; Autonomous AI Operations Teammate for Paytm Merchant Support</span>
+        </div>
+        <div class="project-tags">FastAPI &bull; Sarvam AI (sarvam-105b) &bull; Next.js 14 &bull; Supabase PostgreSQL &bull; WhatsApp Cloud API</div>
+        <ul class="project-bullets">
+          <li>Built for the <strong>Paytm &hearts; AI Hackathon 2026</strong>; automates tier-1 merchant dispute resolutions, payment reconciliations, and terminal operations in Hinglish.</li>
+          <li>Devised a <strong>dual-layer architecture</strong> pairing Sarvam AI Hinglish NLU with a non-LLM mathematical deterministic policy engine to ensure zero AI hallucinations in financial execution.</li>
+          <li>Enforced single-use <strong>SHA-256 cryptographic action tokens</strong> with pre-condition validation before executing ledger settlements, achieving <strong>40/40 correct decisions and 0 unsafe financial actions</strong>.</li>
+          <li>Shipped a real-time reactive merchant operations center with Next.js 14, Tailwind CSS, and Supabase audit trails.</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-title">SSB Smart Document Screening &mdash; Air-Gapped Edge AI Identity Forensic Workstation</span>
+        </div>
+        <div class="project-tags">Python 3.11 &bull; ONNX Runtime &bull; AdaFace &bull; MiniFASNet &bull; SQLCipher &bull; ICAO 9303 &bull; UIDAI RSA-2048 PKI</div>
+        <ul class="project-bullets">
+          <li>Engineered for <strong>Sashastra Seema Bal (Smart India Hackathon 2026)</strong> to secure Indo-Nepal and Indo-Bhutan border checkpoints in strictly air-gapped, zero-trust environments.</li>
+          <li>Implemented an <strong>ICAO Doc 9303 MRZ optical decoupler</strong> (7-3-1 check digit algorithms) and an offline <strong>UIDAI RSA-2048 PKI cryptographic signature verifier</strong> for Aadhaar QR payloads.</li>
+          <li>Integrated <strong>AdaFace 1:1 facial matching</strong> and <strong>MiniFASNet multi-spectral liveness anti-spoofing</strong> optimized via ONNX Runtime for edge CPU execution (&lt;300ms inference).</li>
+          <li>Utilized AES-256 encrypted <strong>SQLCipher</strong> for tamper-proof offline storage; verified with <strong>54/54 passing tests</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-title">CodeForge &mdash; Real-Time Competitive Programming & Algorithmic Arena</span>
+        </div>
+        <div class="project-tags">Next.js 14 &bull; Monaco Editor &bull; Docker &bull; Redis Pub/Sub &bull; PostgreSQL 16 &bull; Prisma ORM</div>
+        <ul class="project-bullets">
+          <li>Developed an interactive competitive coding platform featuring 600+ algorithmic problems, AST-based memory visualizers, and multiplayer 1v1 battle rooms.</li>
+          <li>Built an <strong>ephemeral sandboxed multi-language remote execution engine</strong> using isolated Docker containers with memory and CPU cgroups to prevent jailbreaks.</li>
+          <li>Engineered dynamic <strong>Glicko-2 / Elo matchmaking</strong> and real-time multiplayer code synchronization via Redis Pub/Sub; verified by <strong>48/48 passing tests</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-title">NullNote &mdash; Timestamped Video Knowledge Capture Chrome MV3 Extension</span>
+        </div>
+        <div class="project-tags">Chrome Manifest V3 &bull; TypeScript &bull; Next.js 14 &bull; Shadow DOM &bull; IndexedDB (Dexie) &bull; CRDTs</div>
+        <ul class="project-bullets">
+          <li>Engineered a Manifest V3 Chrome Extension and workspace for sub-second video telemetry, slide frame capture, and bi-directional note synchronization on YouTube.</li>
+          <li>Pioneered a <strong>two-channel delivery protocol</strong> (<code>chrome.tabs.sendMessage</code> + <code>chrome.runtime.sendMessage</code>) to guarantee reliable state delivery across isolated in-tab iframe boundaries.</li>
+          <li>Implemented offline-first storage using <strong>IndexedDB (Dexie.js)</strong> with CRDT conflict resolution and automated export to Notion, Obsidian, and Markdown (<strong>42/42 passing tests</strong>).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="item-header">
+        <span>Bachelor of Technology (B.Tech) in Computer Science & Engineering</span>
+        <span style="font-weight: 500; color: var(--muted);">2023 &ndash; 2027 (Expected)</span>
+      </div>
+      <div class="item-sub">
+        Key Coursework: Data Structures & Algorithms, Operating Systems, Database Management Systems, Computer Networks, Machine Learning.
+      </div>
+    </section>
+
+    <section>
+      <h2>Honors & Achievements</h2>
+      <ul class="project-bullets" style="margin-top: 6px;">
+        <li><strong>Paytm &hearts; AI Hackathon 2026</strong>: Architected Resolve OS with zero unsafe financial actions and 100% policy test coverage.</li>
+        <li><strong>Smart India Hackathon (SIH 2026) Project Lead</strong>: Engineered SSB air-gapped border document and identity screening workstation.</li>
+        <li><strong>Open-Source & Agentic Workflows</strong>: Authored open-source skills for Google DeepMind Antigravity and maintain 25+ public repositories on GitHub.</li>
+      </ul>
+    </section>
+  </div>
+
+</body>
+</html>
