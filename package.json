@@ -1,0 +1,22 @@
+{
+  "name": "sparsh-singh-resume",
+  "version": "1.0.0",
+  "description": "Automated ATS Resume and CI/CD PDF Pipeline for Sparsh Singh",
+  "type": "module",
+  "scripts": {
+    "build:pdf": "node scripts/generate-pdf.mjs",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "resume",
+    "ats-resume",
+    "pdf-generation",
+    "ci-cd",
+    "puppeteer"
+  ],
+  "author": "Sparsh Singh <0workwithsparsh@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "puppeteer": "^23.4.0"
+  }
+}
