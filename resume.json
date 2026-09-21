@@ -1,0 +1,121 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Sparsh Singh",
+    "label": "AI Systems Engineer | Full-Stack & Autonomous Agents Architect",
+    "email": "0workwithsparsh@gmail.com",
+    "url": "https://sparsh101sparsh.github.io/resume/",
+    "summary": "Systems and AI Engineer specializing in multi-modal forensic AI, autonomous agent orchestration, edge computing, and distributed backend architectures. Proven record of engineering high-impact solutions for national-level challenges including air-gapped border biometrics (Smart India Hackathon 2026) and deterministic FinTech operations (Paytm AI Hackathon 2026). Dedicated to deterministic guardrails and 100% automated test coverage across production systems.",
+    "location": {
+      "city": "Bengaluru",
+      "region": "Karnataka",
+      "countryCode": "IN"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "sparsh101sparsh",
+        "url": "https://github.com/sparsh101sparsh"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "sparsh-singh",
+        "url": "https://www.linkedin.com/in/sparsh-singh-00a339271/"
+      },
+      {
+        "network": "X",
+        "username": "issparsh1",
+        "url": "https://x.com/issparsh1"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Languages",
+      "keywords": ["Python", "TypeScript", "JavaScript", "C++", "SQL", "HTML5", "CSS3"]
+    },
+    {
+      "name": "AI & Computer Vision",
+      "keywords": ["PyTorch", "ONNX Runtime", "Vision Transformers (ViT)", "Wav2Vec 2.0", "OpenCV", "RapidOCR", "AdaFace", "MiniFASNet", "Sarvam AI", "XGBoost"]
+    },
+    {
+      "name": "Backend & Distributed Systems",
+      "keywords": ["FastAPI", "Node.js", "Express.js", "Next.js", "Redis Pub/Sub", "PostgreSQL", "Supabase", "SQLCipher", "SQLite WAL"]
+    },
+    {
+      "name": "Cloud & Infrastructure",
+      "keywords": ["AWS (S3, SQS, DynamoDB)", "Docker", "Render", "Vercel", "Meta WhatsApp Cloud API", "Cloudflare Tunnels", "GitHub Actions"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "NETRA",
+      "description": "Enterprise Multi-Modal Forensic AI & Threat Intelligence Platform combating generative AI deepfakes, digital arrest scams, and voice cloning, aligned with RBIH & I4C standards.",
+      "highlights": [
+        "Multi-modal late decision fusion combining spatial CNN boundary seam detectors, ViT diffusion analyzers, and Wav2Vec 2.0 acoustic forensics.",
+        "Meta WhatsApp Cloud API integration for zero-barrier citizen reporting backed by async AWS S3/SQS worker pipelines.",
+        "Automated statutory court-admissible FIR dossier compilation citing BNS 2023 Sec 318(4) and IT Act Sec 66D with 100% pytest pass rate."
+      ],
+      "url": "https://github.com/sparsh101sparsh/netraAI"
+    },
+    {
+      "name": "Resolve OS",
+      "description": "Autonomous AI Operations Teammate for Paytm Merchant Support built for Paytm AI Hackathon 2026.",
+      "highlights": [
+        "Dual-layer architecture pairing Sarvam AI Hinglish NLU with non-LLM deterministic mathematical policy engine.",
+        "Single-use SHA-256 cryptographic action tokens achieving 40/40 correct decisions and 0 unsafe financial actions."
+      ],
+      "url": "https://github.com/sparsh101sparsh/resolve-os"
+    },
+    {
+      "name": "SSB Smart Document Screening",
+      "description": "Air-Gapped Edge AI Identity Forensic Workstation engineered for Sashastra Seema Bal (Smart India Hackathon 2026).",
+      "highlights": [
+        "ICAO Doc 9303 MRZ optical decoupling (7-3-1 check digits) and UIDAI RSA-2048 PKI cryptographic verification.",
+        "AdaFace 1:1 facial verification and MiniFASNet multi-spectral liveness anti-spoofing running on edge CPU via ONNX Runtime (<300ms)."
+      ],
+      "url": "https://github.com/sparsh101sparsh/sih26188-ssb-document-screening"
+    },
+    {
+      "name": "CodeForge",
+      "description": "Real-Time Competitive Programming & Algorithmic Arena.",
+      "highlights": [
+        "Docker-sandboxed multi-language remote execution engine with Glicko-2 / Elo matchmaking.",
+        "Redis Pub/Sub WebSocket synchronization for sub-100ms real-time 1v1 battle duels (48/48 tests passed)."
+      ],
+      "url": "https://github.com/sparsh101sparsh/hackathon3"
+    },
+    {
+      "name": "NullNote",
+      "description": "Timestamped Video Knowledge Capture Chrome MV3 Extension.",
+      "highlights": [
+        "Two-channel delivery protocol (tabs.sendMessage + runtime.sendMessage) resolving iframe messaging in Chrome MV3.",
+        "Offline-first IndexedDB CRDT synchronization and export to Notion, Obsidian, and Markdown (42/42 tests passed)."
+      ],
+      "url": "https://github.com/sparsh101sparsh/NullNoteproject"
+    }
+  ],
+  "education": [
+    {
+      "institution": "University / College of Engineering",
+      "area": "Computer Science & Engineering",
+      "studyType": "Bachelor of Technology (B.Tech)",
+      "startDate": "2023",
+      "endDate": "2027"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Paytm AI Hackathon 2026 Finalist / Contributor",
+      "date": "2026",
+      "awarder": "Paytm",
+      "summary": "Architected Resolve OS with zero unsafe actions and 100% policy test coverage."
+    },
+    {
+      "title": "Smart India Hackathon (SIH 2026) Project Lead",
+      "date": "2026",
+      "awarder": "Ministry of Home Affairs / SSB",
+      "summary": "Architected SSB air-gapped border document and identity screening workstation."
+    }
+  ]
+}
