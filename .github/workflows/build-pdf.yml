@@ -1,0 +1,54 @@
+name: Build & Release Resume PDF
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'resume.html'
+      - 'RESUME.md'
+      - 'scripts/**'
+      - '.github/workflows/build-pdf.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci || npm install
+
+      - name: Compile PDF Artifact
+        run: npm run build:pdf
+
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sparsh_singh_resume
+          path: sparsh_singh_resume.pdf
+          retention-days: 90
+
+      - name: Commit & Push Updated PDF to Repository
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add sparsh_singh_resume.pdf
+          if git diff --staged --quiet; then
+            echo "No changes to PDF, skipping commit."
+          else
+            git commit -m "chore(ci): auto-compile updated resume PDF [skip ci]"
+            git push
+          fi
